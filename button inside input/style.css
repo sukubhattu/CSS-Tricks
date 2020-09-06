@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+.newsletter {
+  /* let the max width be 600px */
+  max-width: 37.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+.newsletter__email {
+  width: 100%;
+  height: 50px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  padding: 1rem 4rem 1rem 1rem;
+  font-size: 1rem;
+  color: grey;
+}
+.newsletter__email:focus {
+  outline: none;
+}
+.newsletter__submit {
+  top: 3px;
+  position: absolute;
+  border-radius: 50px;
+  right: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  padding: 0.8rem 2rem;
+  color: white;
+  background-color: green;
+}
