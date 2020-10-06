@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+.main-nav {
+  height: 48px;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  line-height: 48px;
+}
+.menu {
+  list-style: none;
+  display: inline-block;
+  li {
+    display: inline-block;
+    padding: 0px 40px;
+    a {
+      text-decoration: none;
+      color: #404040;
+    }
+  }
+}
+.mobile-btn {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    // let's keep this aside
+    transform: translateX(300px);
+    transition: all 0.3s ease-in-out;
+    &.open {
+      transform: translateX(0px);
+    }
+    li {
+      &.close {
+        text-align: right;
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    &.open {
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+} ;
